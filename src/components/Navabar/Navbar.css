@@ -1,10 +1,17 @@
 .navbar{
+    position: fixed; 
+    top: 0; /* Stick to the top */
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    background-color: white; /* Adjust background color as needed */
+    z-index: 1000; /* Ensure it's above other content */
     margin-top: 5px;
     padding: 20px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+
 }
 
 .navbar .logo{
@@ -105,8 +112,34 @@ width: 150px;
 }
 
 
-@media (max-width:800px){
-        .navbar-menu{
+@media (max-width:700px){
+    .navbar-menu{
         display: none;
+    }
+    .navbar-right{
+        gap: 15px;
+    }
+    .navbar-right button{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:500px){
+    .navbar .logo{
+        width: 100px;
+    }
+    .navbar-right img{
+        width: 15px;
+    }
+    .navbar-menu{
+        display: none;
+    }
+    .navbar-right{
+        gap: 15px;
+    }
+    .navbar-right button{
+        padding: 5px 10px;
+        font-size: 15px;
     }
 }

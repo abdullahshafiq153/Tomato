@@ -1,6 +1,7 @@
 .header {
   height: 34vw;
   margin: 30px auto;
+  margin-top: 120px;
   background: url("/header_img.png") no-repeat;
   background-size: contain;
   position: relative;
@@ -26,7 +27,7 @@
 
 .header-contents p{
     color: white;
-    font-size: 1vw;
+    font-size: 1.3vw;
 }
 
 .header-contents button{
@@ -49,25 +50,60 @@
 
 @media(max-width:1050px){
   .header{
-    height: 30vw;
+    height: 35vw;
   }
   .header-contents{
-    max-width: 45%;
+    max-width: 50%;
+    top: 60px;
   }
 }
 
-@media(max-width:750px){
+@media(max-width:850px){
+  .header-contents{
+    max-width: 50%;
+    top: 52px;
+  }
+}
+
+@media(max-width:770px){
   
   .header-contents{
-    max-width: 55%;
+    max-width: 45%;
   }
 
   .header-contents p{
     display: none;
   }
-
-  .header-contents button{
-    padding: 2vw 4vw;
+}
+@media(max-width:650px){
+  .header-contents{
+    top: 40px;
   }
-
+}
+@media(max-width:500px){
+  .header-contents{
+    top: 30px;
+  }
+}
+@media(max-width:450px){
+  .header-contents{
+    width: 40%;
+    top: 20px;
+  }
+}
+@media(max-width:400px){
+  .header-contents{
+    top: 10px;
+  }
+  .header-contents h2{
+    font-size: 20px;
+  }
+}
+@media(max-width:350px){
+  .header-contents{
+    top: 10px;
+  }
+  .header-contents h2{
+    font-size: 18px;
+  }
 }
