@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import "./PlaceOrder.css";
 import { StoreContext } from "../../context/StoreContext";
+import { useNavigate } from "react-router-dom";
 
 const PlaceOrder = () => {
 
   const {getTotalCartAmount}=useContext(StoreContext);
+  const navigate = useNavigate();
   // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -48,8 +50,8 @@ const PlaceOrder = () => {
               <b>${getTotalCartAmount()===0?0:getTotalCartAmount() + 2}</b>
             </div>
           </div>
-          <button onClick="">
-            PROCEED TO CHECKOUT
+          <button onClick={()=>navigate('/')}>
+            PROCEED TO PAY
           </button>
         </div>
       </div>
