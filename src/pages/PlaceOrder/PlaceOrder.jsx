@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./PlaceOrder.css";
 import { StoreContext } from "../../context/StoreContext";
 
 const PlaceOrder = () => {
 
-  const {getTotalCartAmount}=useContext(StoreContext)
+  const {getTotalCartAmount}=useContext(StoreContext);
+  // Scroll to top when the component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <form className="place-order">
       <div className="place-order-left">
