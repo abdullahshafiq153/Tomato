@@ -44,7 +44,7 @@ const PlaceOrder = () => {
               <b>${getTotalCartAmount()===0?0:getTotalCartAmount() + 2}</b>
             </div>
           </div>
-          <button>
+          <button onClick="">
             PROCEED TO CHECKOUT
           </button>
         </div>
